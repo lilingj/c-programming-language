@@ -1,4 +1,5 @@
 #include<string.h>
+#include<assert.h>
 
 void reverse(char* s) {
   int len = strlen(s);
@@ -7,4 +8,8 @@ void reverse(char* s) {
     s[i] = s[j];
     s[j] = tmp;
   }
+}
+
+void assert_str_equal(char* s1, char* s2) {
+  assert(strcmp(s1, s2) == 0);
 }
