@@ -1,5 +1,6 @@
 #include<string.h>
 #include<assert.h>
+#include <stdlib.h>
 
 void reverse(char* s) {
   int len = strlen(s);
@@ -12,4 +13,8 @@ void reverse(char* s) {
 
 void assert_str_equal(char* s1, char* s2) {
   assert(strcmp(s1, s2) == 0);
+}
+
+void assert_equal(double v1, double v2) {
+  assert(fabs(v1 - v2) < 0.000001);
 }
